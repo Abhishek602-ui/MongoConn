@@ -29,7 +29,6 @@ public class UserController {
         return userRepository.save(user);
     }
 
-    // new comment
     @PatchMapping("/{id}")
     public User updateUser(@PathVariable String id, @RequestBody User userDetails) {
         return userRepository.findById(id).map(user -> {
